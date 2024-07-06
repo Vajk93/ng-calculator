@@ -1,1 +1,36 @@
-<h1 class="underline">testing tailwind</h1>
+<!-- background: -->
+<div class="fixed top-0 left-0 right-0 bottom-0 -z-10 bg-theme1-background-main"></div>
+
+
+<!-- cault: -->
+ <div class="cault-font p-5 w-full sm:w-[500px] bg-red-400 m-auto mt-40">
+
+	<!-- uppear section: (title and switcher) -->
+    <section class="flex justify-between">
+		<div>calc</div>
+		<div class="flex gap-5">
+			<p>theme</p>
+			<!-- switcher -->
+			<div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- screen section: -->
+	<div class="w-full h-[100px] rounded-lg bg-theme1-background-screen flex justify-end items-center p-5">
+		<p class="text-[44px] font-bold text-white ">{{screenValue}}</p>
+	</div>
+
+	<!-- buttons section: -->
+	 <section class="p-5 bg-theme1-background-toggle mt-5 rounded-md grid grid-cols-4 gap-5">
+		<app-cault-key 
+			*ngFor="let item of buttons"
+			[item]="item"
+			[ngClass]="item.width === 1 ? 'col-span-1' : 'col-span-2'"
+		></app-cault-key>
+	 </section>
+
+ </div>
+
+

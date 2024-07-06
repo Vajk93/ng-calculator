@@ -1,0 +1,7 @@
+<div class="h-14 w-full bg-theme1-key-shadow-light rounded-lg relative pb-1 cursor-pointer hover:opacity-80">
+    <div class="absolute bottom-1 w-full h-full rounded-lg bg-theme1-key-background-light flex justify-center items-center">
+        <p class="text-theme1-text-dark-grayish font-bold mt-2"
+        [ngClass]="(item.value === 'DEL') || (item.value === 'RESET') ?  'text-[26px]' : 'text-[36px]'">
+        {{item.value}}</p>
+    </div>
+</div>
