@@ -23,6 +23,30 @@ export class AppComponent {
 		this.screenValue = _stringNums
 	}
 
+	protected delete(){
+		if(this.arrayOfClickedBtns.length > 1){
+			this.arrayOfClickedBtns.pop();
+			let _strings = this.convertArrayToString(this.arrayOfClickedBtns)
+			console.log(_strings);
+			console.log(this.arrayOfClickedBtns);
+			this.screenValue = _strings
+		} 
+		else {
+			// i am not sure, this will need here:
+			this.screenValue = '0'
+			this.arrayOfClickedBtns = []
+		}
+	}
+
+	protected reset(){
+		this.screenValue = '0'
+		this.arrayOfClickedBtns = []
+	}
+
+	private convertArrayToString(arr: number[]):string {
+		return arr.join('')
+	}
+
 	protected screenValue:string = '0';
 	protected result:number = 0;
 	protected arrayOfClickedBtns:number[] = [];

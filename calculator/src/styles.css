@@ -9,7 +9,7 @@
 }
   
 .key {
-	@apply h-14 w-full bg-theme1-key-shadow-light rounded-lg relative pb-1 cursor-pointer hover:opacity-80
+	@apply h-14 w-full bg-theme1-key-shadow-light rounded-lg relative pb-1 cursor-pointer hover:opacity-80 select-none
 }
 
 .key div {
