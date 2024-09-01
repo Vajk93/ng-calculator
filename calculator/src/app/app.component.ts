@@ -21,14 +21,32 @@ export class AppComponent {
 		console.log(_stringNums);
 		// set the value to screen value:
 		this.screenValue = _stringNums
+		this.formulaChain.push(this.screenValue)
+
+	}
+
+	protected add(){
+		let _lastVal = this.formulaChain.pop();
+		if(_lastVal !== '+'){
+			this.screenValue = ''
+			this.formulaChain.push('+')
+			let _string = this.formulaChain.join('')
+		}
+		this.logEverything()
+	}
+
+	protected reset(){
+		this.screenValue = '0'
+		this.arrayOfClickedBtns = []
+		this.formulaChain = []
 	}
 
 	protected delete(){
 		if(this.arrayOfClickedBtns.length > 1){
 			this.arrayOfClickedBtns.pop();
 			let _strings = this.convertArrayToString(this.arrayOfClickedBtns)
-			console.log(_strings);
-			console.log(this.arrayOfClickedBtns);
+			// console.log(_strings);
+			// console.log(this.arrayOfClickedBtns);
 			this.screenValue = _strings
 		} 
 		else {
@@ -38,18 +56,29 @@ export class AppComponent {
 		}
 	}
 
-	protected reset(){
-		this.screenValue = '0'
-		this.arrayOfClickedBtns = []
+	protected equal(){
+
 	}
 
 	private convertArrayToString(arr: number[]):string {
 		return arr.join('')
 	}
 
+	private logEverything(){
+		console.log('screenValue:');
+		console.log(this.screenValue);
+		console.log('arrayOfClickedBtns:');
+		console.log(this.arrayOfClickedBtns);
+		console.log('formulaChain:');
+		console.log(this.formulaChain);
+		console.log('result:');
+		console.log(this.result);
+	}
+
 	protected screenValue:string = '0';
-	protected result:number = 0;
 	protected arrayOfClickedBtns:number[] = [];
+	protected formulaChain:string[] = [];
+	protected result:number = 0;
 	
 	// public buttons: ICaultBtn[] = [
 	// 	{ value: 7, function: this.clickBtn(), width: 1},
