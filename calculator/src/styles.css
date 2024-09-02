@@ -9,14 +9,14 @@
 }
   
 .key {
-	@apply h-14 w-full bg-theme1-key-shadow-light rounded-lg relative pb-1 cursor-pointer hover:opacity-80 select-none
+	@apply h-14 w-full rounded-lg relative pb-1 cursor-pointer hover:opacity-80 select-none
 }
 
 .key div {
-	@apply absolute bottom-1 w-full h-full rounded-lg bg-theme1-key-background-light flex justify-center items-center
+	@apply absolute bottom-1 w-full h-full rounded-lg flex justify-center items-center
 }
 
 .key p {
-	@apply text-theme1-text-dark-grayish font-bold mt-2 text-[26px]
+	@apply font-bold mt-2 text-[26px]
 }
 
