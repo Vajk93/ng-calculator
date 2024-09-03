@@ -39,7 +39,7 @@
 		</div>
 		<div [style.backgroundColor]="selectedTheme.delResetKeyBg" (click)="delete()" class="key">
 			<div [style.backgroundColor]="selectedTheme.delResetKeyShadow">
-				<p [style.color]="selectedTheme.delResetText">DEL</p>
+				<p [style.color]="selectedTheme.delResetText" class="!text-[22px]">DEL</p>
 			</div>
 		</div>
 		<div (click)="clickNumber('4')" [style.backgroundColor]="selectedTheme.buttonsBg" class="key">
@@ -104,7 +104,7 @@
 		</div>
 		<div (click)="reset()" [style.backgroundColor]="selectedTheme.delResetKeyBg" class="key col-span-2">
 			<div [style.backgroundColor]="selectedTheme.delResetKeyShadow">
-				<p [style.color]="selectedTheme.delResetText">RESET</p>
+				<p [style.color]="selectedTheme.delResetText" class="!text-[22px]">RESET</p>
 			</div>
 		</div>
 		<div (click)="equal()" [style.backgroundColor]="selectedTheme.equalKeyBg" class="key col-span-2">
