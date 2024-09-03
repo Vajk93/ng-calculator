@@ -3,18 +3,26 @@ export interface ICaultBtn {
 	function: any,
 	width: 1 | 2,
 }
+
 export interface ITheme {
-	backgroundMain: string;         // A fő háttér színe
-	backgroundToggle: string;       // A téma váltó háttérszíne
-	backgroundScreen: string;       // A kijelző háttérszíne
-	keyBackground: string;          // A világos gombok háttérszíne
-	keyShadow: string;              // A világos gombok árnyékszíne
-	keyBackgroundToggle: string;    // A speciális gombok (pl. DEL) háttérszíne
-	keyShadowDark: string;          // A speciális gombok (pl. DEL) árnyékszíne
-	keyBackgroundLight: string;     // A különleges gombok (pl. egyenlőségjel) háttérszíne
-	keyShadowLight: string;         // A különleges gombok (pl. egyenlőségjel) árnyékszíne
-	keyTextColor: string;           // A gombokon lévő szöveg színe (számok és operátorok)
-	textWhite: string;              // A kijelző szövegszíne és a gombok fehér szövege
+	mainBg: string;               // A fő háttér színe
+	calcText: string;             // A számológép szövegeinek színe
+	themeText: string;            // A téma választó szövegének színe
+	switcherNumbers: string;      // A téma választó gombok színe
+	switcherBg: string;           // A téma váltó háttérszíne
+	switcherToggleBtn: string;    // A téma váltó gomb színe
+	screenBg: string;             // A kijelző háttérszíne
+	screenText: string;           // A kijelzőn megjelenő számok színe
+	bgOfButtons: string;
+	buttonsBg: string;            // A gombok mögötti háttérszín
+	basicButtonsText: string;     // A számok és alapműveleti jelek színe a gombokon
+	basicButtonsShadow: string;   // A számok és alapműveleti jelek árnyéka
+	delResetText: string;         // A DEL és RESET gombok szövegének színe
+	delResetKeyBg: string;        // A DEL és RESET gombok háttérszíne
+	delResetKeyShadow: string;    // A DEL és RESET gombok árnyéka
+	equalText: string;            // Az egyenlőségjel gomb szövegének színe
+	equalKeyBg: string;           // Az egyenlőségjel gomb háttérszíne
+	equalKeyShadow: string;       // Az egyenlőségjel gomb árnyéka
   }
   
   export interface IThemes {

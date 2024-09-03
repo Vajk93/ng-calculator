@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ICaultBtn, ITheme, IThemes } from './interfaces/globals';
+import { ITheme, IThemes } from './interfaces/globals';
 import { ThemeSwitcherService } from './services/theme-switcher.service';
 
 @Component({
@@ -151,59 +151,124 @@ export class AppComponent implements OnInit {
 	}
 
 	protected selectedTheme:ITheme = {
-		  backgroundMain: '#3A4764',       // A fő háttér színe
-		  backgroundToggle: '#252D44',     // A téma váltó háttérszíne
-		  backgroundScreen: '#181F33',     // A kijelző háttérszíne
-		  keyBackground: '#EAE3DC',        // A világos gombok háttérszíne
-		  keyShadow: '#B4A597',            // A világos gombok árnyékszíne
-		  keyBackgroundToggle: '#637097',  // A speciális gombok (pl. DEL) háttérszíne
-		  keyShadowDark: '#404E72',        // A speciális gombok (pl. DEL) árnyékszíne
-		  keyBackgroundLight: '#D03F2F',   // A különleges gombok (pl. egyenlőségjel) háttérszíne
-		  keyShadowLight: '#93261A',       // A különleges gombok (pl. egyenlőségjel) árnyékszíne
-		  keyTextColor: '#444B5A',         // A gombokon lévő szöveg színe (számok és operátorok)
-		  textWhite: '#FFFFFF',            // A kijelző szövegszíne és a gombok fehér szövege
+		mainBg: '#3A4764',
+		calcText: '#FFFFFF',
+		themeText: '#FFFFFF',
+		switcherNumbers: '#FFFFFF',
+		switcherBg: '#252D44',
+		switcherToggleBtn: '#D03F2F',
+		screenBg: '#181F33',
+		screenText: '#FFFFFF',
+		bgOfButtons: '#EAE3DC',
+		buttonsBg: '#252D44',
+		basicButtonsText: '#444B5A',
+		basicButtonsShadow: '#B4A597',
+		delResetText: '#FFFFFF',
+		delResetKeyBg: '#637097',
+		delResetKeyShadow: '#404E72',
+		equalText: '#FFFFFF',
+		equalKeyBg: '#D03F2F',
+		equalKeyShadow: '#93261A',      
 	}
 
-	protected themes:IThemes = {
+	protected themes: IThemes = {
 		first: {
-		  backgroundMain: '#3A4764',       // A fő háttér színe
-		  backgroundToggle: '#252D44',     // A téma váltó háttérszíne
-		  backgroundScreen: '#181F33',     // A kijelző háttérszíne
-		  keyBackground: '#EAE3DC',        // A világos gombok háttérszíne
-		  keyShadow: '#B4A597',            // A világos gombok árnyékszíne
-		  keyBackgroundToggle: '#637097',  // A speciális gombok (pl. DEL) háttérszíne
-		  keyShadowDark: '#404E72',        // A speciális gombok (pl. DEL) árnyékszíne
-		  keyBackgroundLight: '#D03F2F',   // A különleges gombok (pl. egyenlőségjel) háttérszíne
-		  keyShadowLight: '#93261A',       // A különleges gombok (pl. egyenlőségjel) árnyékszíne
-		  keyTextColor: '#444B5A',         // A gombokon lévő szöveg színe (számok és operátorok)
-		  textWhite: '#FFFFFF',            // A kijelző szövegszíne és a gombok fehér szövege
+		  mainBg: '#3A4764',               // A fő háttér színe (blue)
+		  calcText: '#FFFFFF',             // A számológép szövegeinek színe
+		  themeText: '#FFFFFF',            // A téma választó szövegének színe
+		  switcherNumbers: '#FFFFFF',      // A téma választó gombok színe
+		  switcherBg: '#252D44',           // A téma váltó háttérszíne
+		  switcherToggleBtn: '#D03F2F',    // A téma váltó gomb színe
+		  screenBg: '#181F33',             // A kijelző háttérszíne
+		  screenText: '#FFFFFF', 		   // A kijelzőn megjelenő számok színe
+		  bgOfButtons: '#242E43',          
+		  buttonsBg: '#B4A597',            // A gombok mögötti háttérszín
+		  basicButtonsText: '#444B5A',     // A számok és alapműveleti jelek színe a gombokon
+		  basicButtonsShadow: '#EAE3DC',   // A számok és alapműveleti jelek árnyéka
+		  delResetText: '#FFFFFF',         // A DEL és RESET gombok szövegének színe
+		  delResetKeyBg: '#637097',        // A DEL és RESET gombok háttérszíne
+		  delResetKeyShadow: '#404E72',    // A DEL és RESET gombok árnyéka
+		  equalText: '#FFFFFF',            // Az egyenlőségjel gomb szövegének színe
+		  equalKeyBg: '#D03F2F',           // Az egyenlőségjel gomb háttérszíne
+		  equalKeyShadow: '#93261A',       // Az egyenlőségjel gomb árnyéka
 		},
 		second: {
-		  backgroundMain: '#E6E6E6',       // A fő háttér színe
-		  backgroundToggle: '#D2CDCD',     // A téma váltó háttérszíne
-		  backgroundScreen: '#EEEEEE',     // A kijelző háttérszíne
-		  keyBackground: '#E5E4E1',        // A világos gombok háttérszíne
-		  keyShadow: '#A69D91',            // A világos gombok árnyékszíne
-		  keyBackgroundToggle: '#377F86',  // A speciális gombok (pl. DEL) háttérszíne
-		  keyShadowDark: '#1B5F65',        // A speciális gombok (pl. DEL) árnyékszíne
-		  keyBackgroundLight: '#CA5502',   // A különleges gombok (pl. egyenlőségjel) háttérszíne
-		  keyShadowLight: '#893901',       // A különleges gombok (pl. egyenlőségjel) árnyékszíne
-		  keyTextColor: '#36362C',         // A gombokon lévő szöveg színe (számok és operátorok)
-		  textWhite: '#FFFFFF',            // A kijelző szövegszíne és a gombok fehér szövege
+		  mainBg: '#E6E6E6',
+		  calcText: '#36362C',
+		  themeText: '#36362C',
+		  switcherNumbers: '#36362C',
+		  switcherBg: '#D2CDCD',
+		  switcherToggleBtn: '#CA5502', 
+		  screenBg: '#EEEEEE', 
+		  screenText: '#36362C', 
+		  bgOfButtons: '#D3CDCF',
+		  buttonsBg: '#AFACA4',
+		  basicButtonsText: '#36362C',
+		  basicButtonsShadow: '#E5E4E0',
+		  delResetText: '#FFFFFF',
+		  delResetKeyBg: '#377F86',
+		  delResetKeyShadow: '#1B5F65',
+		  equalText: '#FFFFFF',
+		  equalKeyBg: '#CA5502',
+		  equalKeyShadow: '#893901',
 		},
 		third: {
-		  backgroundMain: '#17062A',       // A fő háttér színe
-		  backgroundToggle: '#1E0836',     // A téma váltó háttérszíne
-		  backgroundScreen: '#1E0836',     // A kijelző háttérszíne
-		  keyBackground: '#331C4D',        // A világos gombok háttérszíne
-		  keyShadow: '#881C9E',            // A világos gombok árnyékszíne
-		  keyBackgroundToggle: '#56077C',  // A speciális gombok (pl. DEL) háttérszíne
-		  keyShadowDark: '#BC15F4',        // A speciális gombok (pl. DEL) árnyékszíne
-		  keyBackgroundLight: '#00DED0',   // A különleges gombok (pl. egyenlőségjel) háttérszíne
-		  keyShadowLight: '#6CF9F2',       // A különleges gombok (pl. egyenlőségjel) árnyékszíne
-		  keyTextColor: '#FFE53D',         // A gombokon lévő szöveg színe (számok és operátorok, sárga)
-		  textWhite: '#FFFFFF',            // A kijelző szövegszíne és a gombok fehér szövege
+		  mainBg: '#17062A',
+		  calcText: '#FFE53D',
+		  themeText: '#FFE53D',
+		  switcherNumbers: '#FFE53D',
+		  switcherBg: '#1E0836',
+		  switcherToggleBtn: '#00DED0',
+		  screenBg: '#1E0836',
+		  screenText: '#FFE53D',
+		  bgOfButtons: '#1C0634',
+		  buttonsBg: '#881C9E',
+		  basicButtonsText: '#FFE53D',
+		  basicButtonsShadow: '#33194D',
+		  delResetText: '#FFFFFF',
+		  delResetKeyBg: '#56077C',
+		  delResetKeyShadow: '#BC15F4',
+		  equalText: '#1E0836',
+		  equalKeyBg: '#00DED0',
+		  equalKeyShadow: '#6CF9F2',
 		}
 	  };
 	  
+	  
 }
+
+
+
+
+
+
+
+
+
+// mainBg: A fő háttér színe (blue, light, purple).
+// calcText: A számológép szövegeinek színe.
+// themeText: A téma választó szövegének színe.
+// switcherNumbers: A téma választó gombok színe.
+// switcherBg: A téma váltó háttérszíne.
+// switcherToggleBtn: A téma váltó gomb színe.
+// screenBg: A kijelző háttérszíne.
+// screenText: A kijelzőn megjelenő számok színe.
+// buttonsBg: A gombok mögötti háttérszín.
+// basicButtonsText: A számok és alapműveleti jelek színe a gombokon.
+// basicButtonsShadow: A számok és alapműveleti jelek árnyéka.
+// delResetText: A DEL és RESET gombok szövegének színe.
+// delResetKeyBg: A DEL és RESET gombok háttérszíne.
+// delResetKeyShadow: A DEL és RESET gombok árnyéka.
+// equalText: Az egyenlőségjel gomb szövegének színe.
+// equalKeyBg: Az egyenlőségjel gomb háttérszíne.
+// equalKeyShadow: Az egyenlőségjel gomb árnyéka.
+// Ez a themes objektum teljesen megfelel az
+
+
+
+
+
+
+
+
+

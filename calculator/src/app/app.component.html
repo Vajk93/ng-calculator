@@ -1,115 +1,115 @@
 <!-- background: -->
-<div [style.backgroundColor]="selectedTheme.backgroundMain" 
+<div [style.backgroundColor]="selectedTheme.mainBg" 
 	class="fixed top-0 left-0 right-0 bottom-0 -z-10">
 </div>
 
 
 <!-- cault: -->
-<div [style.backgroundColor]="selectedTheme.backgroundMain" class="cault-font p-5 w-full sm:w-[500px] m-auto mt-40">
+<div [style.backgroundColor]="selectedTheme.mainBg" class="cault-font p-5 w-full sm:w-[500px] m-auto mt-40">
 
 	<!-- uppear section: (title and switcher) -->
     <section class="flex justify-between">
-		<div class="text-white font-bold text-[28px] mb-6">calc</div>
+		<div [style.color]="selectedTheme.calcText" class="text-white font-bold text-[28px] mb-6">calc</div>
 		<div class="flex gap-5">
 			 <app-theme-switcher></app-theme-switcher>
 		</div>
 	</section>
 	
 	<!-- screen section: -->
-	<div [style.backgroundColor]="selectedTheme.backgroundScreen" class="w-full h-[100px] rounded-lg flex justify-end items-center p-5">
-		<p [style.color]="selectedTheme.textWhite" class="text-[55px] font-bold text-white ">{{ isNaN(screenValue) ? 'whaaat!?' : screenValue }}</p>
+	<div [style.backgroundColor]="selectedTheme.screenBg" class="w-full h-[100px] rounded-lg flex justify-end items-center p-5">
+		<p [style.color]="selectedTheme.screenText" class="text-[55px] font-bold text-white ">{{ isNaN(screenValue) ? 'whaaat!?' : screenValue }}</p>
 	</div>
 
 	<!-- buttons section: -->
-	 <section class="p-5 bg-theme1-background-toggle mt-5 rounded-md grid grid-cols-4 gap-5">
-		<div (click)="clickNumber('7')" [style.backgroundColor]="selectedTheme.keyBackground" class="key">
-			<div [style.backgroundColor]="selectedTheme.keyShadow">
-				<p [style.color]="selectedTheme.keyTextColor">7</p>
+	 <section [style.backgroundColor]="selectedTheme.bgOfButtons" class="p-5 mt-5 rounded-md grid grid-cols-4 gap-5">
+		<div (click)="clickNumber('7')" [style.backgroundColor]="selectedTheme.buttonsBg" class="key">
+			<div [style.backgroundColor]="selectedTheme.basicButtonsShadow">
+				<p [style.color]="selectedTheme.basicButtonsText">7</p>
 			</div>
 		</div>
-		<div (click)="clickNumber('8')" [style.backgroundColor]="selectedTheme.keyBackground" class="key">
-			<div [style.backgroundColor]="selectedTheme.keyShadow">
-				<p [style.color]="selectedTheme.keyTextColor">8</p>
+		<div (click)="clickNumber('8')" [style.backgroundColor]="selectedTheme.buttonsBg" class="key">
+			<div [style.backgroundColor]="selectedTheme.basicButtonsShadow">
+				<p [style.color]="selectedTheme.basicButtonsText">8</p>
 			</div>
 		</div>
-		<div (click)="clickNumber('9')" [style.backgroundColor]="selectedTheme.keyBackground" class="key">
-			<div [style.backgroundColor]="selectedTheme.keyShadow">
-				<p [style.color]="selectedTheme.keyTextColor">9</p>
+		<div (click)="clickNumber('9')" [style.backgroundColor]="selectedTheme.buttonsBg" class="key">
+			<div [style.backgroundColor]="selectedTheme.basicButtonsShadow">
+				<p [style.color]="selectedTheme.basicButtonsText">9</p>
 			</div>
 		</div>
-		<div (click)="delete()" class="key">
-			<div>
-				<p>DEL</p>
+		<div [style.backgroundColor]="selectedTheme.delResetKeyBg" (click)="delete()" class="key">
+			<div [style.backgroundColor]="selectedTheme.delResetKeyShadow">
+				<p [style.color]="selectedTheme.delResetText">DEL</p>
 			</div>
 		</div>
-		<div (click)="clickNumber('4')" [style.backgroundColor]="selectedTheme.keyBackground" class="key">
-			<div [style.backgroundColor]="selectedTheme.keyShadow">
-				<p [style.color]="selectedTheme.keyTextColor">4</p>
+		<div (click)="clickNumber('4')" [style.backgroundColor]="selectedTheme.buttonsBg" class="key">
+			<div [style.backgroundColor]="selectedTheme.basicButtonsShadow">
+				<p [style.color]="selectedTheme.basicButtonsText">4</p>
 			</div>
 		</div>
-		<div (click)="clickNumber('5')" [style.backgroundColor]="selectedTheme.keyBackground" class="key">
-			<div [style.backgroundColor]="selectedTheme.keyShadow">
-				<p [style.color]="selectedTheme.keyTextColor">5</p>
+		<div (click)="clickNumber('5')" [style.backgroundColor]="selectedTheme.buttonsBg" class="key">
+			<div [style.backgroundColor]="selectedTheme.basicButtonsShadow">
+				<p [style.color]="selectedTheme.basicButtonsText">5</p>
 			</div>
 		</div>
-		<div (click)="clickNumber('6')" [style.backgroundColor]="selectedTheme.keyBackground" class="key">
-			<div [style.backgroundColor]="selectedTheme.keyShadow">
-				<p [style.color]="selectedTheme.keyTextColor">6</p>
+		<div (click)="clickNumber('6')" [style.backgroundColor]="selectedTheme.buttonsBg" class="key">
+			<div [style.backgroundColor]="selectedTheme.basicButtonsShadow">
+				<p [style.color]="selectedTheme.basicButtonsText">6</p>
 			</div>
 		</div>
-		<div (click)="clickOperator('+')" [style.backgroundColor]="selectedTheme.keyBackground" class="key">
-			<div [style.backgroundColor]="selectedTheme.keyShadow">
-				<p [style.color]="selectedTheme.keyTextColor">+</p>
+		<div (click)="clickOperator('+')" [style.backgroundColor]="selectedTheme.buttonsBg" class="key">
+			<div [style.backgroundColor]="selectedTheme.basicButtonsShadow">
+				<p [style.color]="selectedTheme.basicButtonsText">+</p>
 			</div>
 		</div>
-		<div (click)="clickNumber('1')" [style.backgroundColor]="selectedTheme.keyBackground" class="key">
-			<div [style.backgroundColor]="selectedTheme.keyShadow">
-				<p [style.color]="selectedTheme.keyTextColor">1</p>
+		<div (click)="clickNumber('1')" [style.backgroundColor]="selectedTheme.buttonsBg" class="key">
+			<div [style.backgroundColor]="selectedTheme.basicButtonsShadow">
+				<p [style.color]="selectedTheme.basicButtonsText">1</p>
 			</div>
 		</div>
-		<div (click)="clickNumber('2')" [style.backgroundColor]="selectedTheme.keyBackground" class="key">
-			<div [style.backgroundColor]="selectedTheme.keyShadow">
-				<p [style.color]="selectedTheme.keyTextColor">2</p>
+		<div (click)="clickNumber('2')" [style.backgroundColor]="selectedTheme.buttonsBg" class="key">
+			<div [style.backgroundColor]="selectedTheme.basicButtonsShadow">
+				<p [style.color]="selectedTheme.basicButtonsText">2</p>
 			</div>
 		</div>
-		<div (click)="clickNumber('3')" [style.backgroundColor]="selectedTheme.keyBackground" class="key">
-			<div [style.backgroundColor]="selectedTheme.keyShadow">
-				<p [style.color]="selectedTheme.keyTextColor">3</p>
+		<div (click)="clickNumber('3')" [style.backgroundColor]="selectedTheme.buttonsBg" class="key">
+			<div [style.backgroundColor]="selectedTheme.basicButtonsShadow">
+				<p [style.color]="selectedTheme.basicButtonsText">3</p>
 			</div>
 		</div>
-		<div (click)="clickOperator('-')" [style.backgroundColor]="selectedTheme.keyBackground" class="key">
-			<div [style.backgroundColor]="selectedTheme.keyShadow">
-				<p [style.color]="selectedTheme.keyTextColor">-</p>
+		<div (click)="clickOperator('-')" [style.backgroundColor]="selectedTheme.buttonsBg" class="key">
+			<div [style.backgroundColor]="selectedTheme.basicButtonsShadow">
+				<p [style.color]="selectedTheme.basicButtonsText">-</p>
 			</div>
 		</div>
-		<div (click)="clickNumber('.')" [style.backgroundColor]="selectedTheme.keyBackground" class="key">
-			<div [style.backgroundColor]="selectedTheme.keyShadow">
-				<p [style.color]="selectedTheme.keyTextColor">.</p>
+		<div (click)="clickNumber('.')" [style.backgroundColor]="selectedTheme.buttonsBg" class="key">
+			<div [style.backgroundColor]="selectedTheme.basicButtonsShadow">
+				<p [style.color]="selectedTheme.basicButtonsText">.</p>
 			</div>
 		</div>
-		<div (click)="clickNumber('0')" [style.backgroundColor]="selectedTheme.keyBackground" class="key">
-			<div [style.backgroundColor]="selectedTheme.keyShadow">
-				<p [style.color]="selectedTheme.keyTextColor">0</p>
+		<div (click)="clickNumber('0')" [style.backgroundColor]="selectedTheme.buttonsBg" class="key">
+			<div [style.backgroundColor]="selectedTheme.basicButtonsShadow">
+				<p [style.color]="selectedTheme.basicButtonsText">0</p>
 			</div>
 		</div>
-		<div (click)="clickOperator('/')" [style.backgroundColor]="selectedTheme.keyBackground" class="key">
-			<div [style.backgroundColor]="selectedTheme.keyShadow">
-				<p [style.color]="selectedTheme.keyTextColor">/</p>
+		<div (click)="clickOperator('/')" [style.backgroundColor]="selectedTheme.buttonsBg" class="key">
+			<div [style.backgroundColor]="selectedTheme.basicButtonsShadow">
+				<p [style.color]="selectedTheme.basicButtonsText">/</p>
 			</div>
 		</div>
-		<div (click)="clickOperator('*')" [style.backgroundColor]="selectedTheme.keyBackground" class="key">
-			<div [style.backgroundColor]="selectedTheme.keyShadow">
-				<p [style.color]="selectedTheme.keyTextColor">x</p>
+		<div (click)="clickOperator('*')" [style.backgroundColor]="selectedTheme.buttonsBg" class="key">
+			<div [style.backgroundColor]="selectedTheme.basicButtonsShadow">
+				<p [style.color]="selectedTheme.basicButtonsText">x</p>
 			</div>
 		</div>
-		<div (click)="reset()" class="key col-span-2">
-			<div>
-				<p>RESET</p>
+		<div (click)="reset()" [style.backgroundColor]="selectedTheme.delResetKeyBg" class="key col-span-2">
+			<div [style.backgroundColor]="selectedTheme.delResetKeyShadow">
+				<p [style.color]="selectedTheme.delResetText">RESET</p>
 			</div>
 		</div>
-		<div (click)="equal()" class="key col-span-2">
-			<div>
-				<p>=</p>
+		<div (click)="equal()" [style.backgroundColor]="selectedTheme.equalKeyBg" class="key col-span-2">
+			<div [style.backgroundColor]="selectedTheme.equalKeyShadow">
+				<p [style.color]="selectedTheme.equalText">=</p>
 			</div>
 		</div>
 
